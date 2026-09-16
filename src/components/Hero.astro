@@ -131,6 +131,15 @@ import { siteConfig } from "../config";
   </svg>
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
+      {
+        siteConfig.profileImage && (
+          <img
+            src={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/${siteConfig.profileImage}`}
+            alt={siteConfig.name}
+            class="mb-6 h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 rounded-full object-cover shadow-lg animate-fade-in"
+          />
+        )
+      }
       <h2
         class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
       >
